@@ -45,16 +45,86 @@
     }
   ],
   "users": [
-    { "id": 1, "name": "Alice Smith", "admin": true },
-    { "id": 2, "name": "Bob Johnson", "admin": false },
-    { "id": 3, "name": "Carol Williams", "admin": false },
-    { "id": 4, "name": "David Brown", "admin": true },
-    { "id": 5, "name": "Emma Davis", "admin": false },
-    { "id": 6, "name": "Frank Wilson", "admin": false },
-    { "id": 7, "name": "Grace Taylor", "admin": true },
-    { "id": 8, "name": "Henry Anderson", "admin": false },
-    { "id": 9, "name": "Isabella Martinez", "admin": false },
-    { "id": 10, "name": "James Thomas", "admin": false }
+    {
+      "id": 1,
+      "name": "Alice Smith",
+      "admin": true,
+      "address": "123 Music Row, Nashville, TN 37203",
+      "phoneNumber": "615-0101",
+      "email": "alice.smith@email.com"
+    },
+    {
+      "id": 2,
+      "name": "Bob Johnson",
+      "admin": false,
+      "address": "456 Broadway, Nashville, TN 37203",
+      "phoneNumber": "615-0102",
+      "email": "bob.johnson@email.com"
+    },
+    {
+      "id": 3,
+      "name": "Carol Williams",
+      "admin": false,
+      "address": "789 16th Avenue South, Nashville, TN 37212",
+      "phoneNumber": "615-0103",
+      "email": "carol.williams@email.com"
+    },
+    {
+      "id": 4,
+      "name": "David Brown",
+      "admin": true,
+      "address": "321 Demonbreun Street, Nashville, TN 37201",
+      "phoneNumber": "615-0104",
+      "email": "david.brown@email.com"
+    },
+    {
+      "id": 5,
+      "name": "Emma Davis",
+      "admin": false,
+      "address": "654 Belle Meade Boulevard, Nashville, TN 37205",
+      "phoneNumber": "615-0105",
+      "email": "emma.davis@email.com"
+    },
+    {
+      "id": 6,
+      "name": "Frank Wilson",
+      "admin": false,
+      "address": "987 Hillsboro Pike, Brentwood, TN 37027",
+      "phoneNumber": "615-0106",
+      "email": "frank.wilson@email.com"
+    },
+    {
+      "id": 7,
+      "name": "Grace Taylor",
+      "admin": true,
+      "address": "147 Main Street, Franklin, TN 37064",
+      "phoneNumber": "615-0107",
+      "email": "grace.taylor@email.com"
+    },
+    {
+      "id": 8,
+      "name": "Henry Anderson",
+      "admin": false,
+      "address": "258 Gallatin Pike, Hendersonville, TN 37075",
+      "phoneNumber": "615-0108",
+      "email": "henry.anderson@email.com"
+    },
+    {
+      "id": 9,
+      "name": "Isabella Martinez",
+      "admin": false,
+      "address": "369 Church Street, Murfreesboro, TN 37130",
+      "phoneNumber": "615-0109",
+      "email": "isabella.martinez@email.com"
+    },
+    {
+      "id": 10,
+      "name": "James Thomas",
+      "admin": false,
+      "address": "741 Lebanon Pike, Hermitage, TN 37076",
+      "phoneNumber": "615-0110",
+      "email": "james.thomas@email.com"
+    }
   ],
   "assignedEmployees": [
     { "id": 1, "orderId": 1, "userId": 2, "delivering": true },
