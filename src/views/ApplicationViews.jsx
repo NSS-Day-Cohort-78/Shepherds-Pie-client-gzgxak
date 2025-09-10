@@ -25,7 +25,10 @@ export const ApplicationViews = () => {
 			>
 				<Route index element={<h1>Order List</h1>} />
 				<Route path="/neworder" element={<h1>Create New Order</h1>} />
-				<Route path="/employeelist" element={<h1>Employee List</h1>} />
+				<Route path="/employees">
+					<Route index element={<EmployeeList currentUser={currentUser} />} />
+					<Route path =":employeeId" element={<EmployeeEdit />} />
+				</Route>
 				<Route path="/report" element={<h1>Sales Report</h1>} />
 			</Route>
 		</Routes>
