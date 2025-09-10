@@ -22,7 +22,7 @@ export const NavBar = () => {
 			</li>
 			<li>
 				<Link
-					to="/employeelist"
+					to="/employees"
 					className="text-white hover:text-blue-300 transition-colors duration-200"
 				>
 					Employee List
