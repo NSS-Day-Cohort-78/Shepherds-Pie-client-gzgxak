@@ -1,19 +1,30 @@
 import { useState, useEffect } from "react"
+import { useParams } from "react-router-dom"
+import { getOrderById } from "../service/orderService"
 
 export const OrderDetails = () => {
-    const [customerDetails, setDetails] = useState({})
-    
+    const [order, setOrder] = useState({})
+    const [pizzas, setPizzas] = useState({})
+    const { orderId } = useParams()
+
+    useEffect(() => {
+        getOrderById(orderId).then((obj) => {
+            const orderObj = obj[0]
+            setOrder(orderObj)
+        })
+    }, [])
+
     return (
     <>
     <section>
         <header>Order Details</header>
         <div>
             <span>Order ID: </span>
-            {orderId}
+            {order.id}
         </div>
         <div>
             <span>Order Submitted: </span>
-            {dateTimeCreated}
+            {order.dateCreated}
         </div>
         <div>
             <h3>Customer Info: </h3>
