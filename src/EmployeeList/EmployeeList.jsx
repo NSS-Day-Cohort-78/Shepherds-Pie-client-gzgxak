@@ -9,7 +9,7 @@ export const EmployeeList = ({ currentUser }) => {
   if (!currentUser?.admin) {
     return (
         <div className="access-denied">
-            <p>Sorry, you must be logged in an an Administrator to view this page.</p>
+            <p>Sorry, you must be logged in as an Administrator to view this page.</p>
         </div>
     )
   }
