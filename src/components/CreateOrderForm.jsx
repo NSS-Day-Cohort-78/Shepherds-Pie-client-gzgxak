@@ -30,9 +30,10 @@ export const NewOrderForm = ({ currentUser }) => {
         customerAddress: order.customerAddress,
         delivery: order.delivery,
         tip: order.tip,
+        dateTimeCreated: new Date(),
       };
       createNewOrder(newOrder).then(() => {
-        navigate("/");
+        navigate("/orderDetails");
       });
     } else if (
       order.delivery === false &&
@@ -48,9 +49,10 @@ export const NewOrderForm = ({ currentUser }) => {
         customerAddress: order.customerAddress,
         delivery: order.delivery,
         tip: order.tip,
+        dateTimeCreated: new Date(),
       };
       createNewOrder(newOrder).then(() => {
-        navigate("/");
+        navigate("/orderDetails");
       });
     } else {
       window.alert("Please fill out fields!");
@@ -68,9 +70,9 @@ export const NewOrderForm = ({ currentUser }) => {
             name="customer-name"
             placeholder="Name"
             onChange={(event) => {
-              const newOrderCopy = { ...newOrder };
-              newOrderCopy.customerName = event.target.value;
-              setOrder(newOrderCopy);
+              const orderCopy = { ...order };
+              orderCopy.customerName = event.target.value;
+              setOrder(orderCopy);
             }}
           />
         </div>
@@ -83,9 +85,9 @@ export const NewOrderForm = ({ currentUser }) => {
             name="customer-phone"
             placeholder="Phone Number"
             onChange={(event) => {
-              const newOrderCopy = { ...newOrder };
-              newOrderCopy.customerPhoneNumber = event.target.value;
-              setOrder(newOrderCopy);
+              const orderCopy = { ...order };
+              orderCopy.customerPhoneNumber = event.target.value;
+              setOrder(orderCopy);
             }}
           />
         </div>
@@ -98,9 +100,9 @@ export const NewOrderForm = ({ currentUser }) => {
             name="customer-email"
             placeholder="Email"
             onChange={(event) => {
-              const newOrderCopy = { ...newOrder };
-              newOrderCopy.customerEmail = event.target.value;
-              setOrder(newOrderCopy);
+              const orderCopy = { ...order };
+              orderCopy.customerEmail = event.target.value;
+              setOrder(orderCopy);
             }}
           />
         </div>
@@ -113,9 +115,9 @@ export const NewOrderForm = ({ currentUser }) => {
             name="customer-address"
             placeholder="Address"
             onChange={(event) => {
-              const newOrderCopy = { ...newOrder };
-              newOrderCopy.customerAddress = event.target.value;
-              setOrder(newOrderCopy);
+              const orderCopy = { ...order };
+              orderCopy.customerAddress = event.target.value;
+              setOrder(orderCopy);
             }}
           />
         </div>
@@ -127,9 +129,9 @@ export const NewOrderForm = ({ currentUser }) => {
             type="checkbox"
             name="delivery-option"
             onChange={(event) => {
-              const newOrderCopy = { ...newOrder };
-              newOrderCopy.delivery = event.target.checked;
-              setOrder(newOrderCopy);
+              const orderCopy = { ...order };
+              orderCopy.delivery = event.target.checked;
+              setOrder(orderCopy);
             }}
           />
         </div>
@@ -142,9 +144,9 @@ export const NewOrderForm = ({ currentUser }) => {
             name="customer-tip"
             placeholder="Tip Amount"
             onChange={(event) => {
-              const newOrderCopy = { ...newOrder };
-              newOrderCopy.tip = event.target.value;
-              setOrder(newOrderCopy);
+              const orderCopy = { ...order };
+              orderCopy.tip = event.target.value;
+              setOrder(orderCopy);
             }}
           />
         </div>
