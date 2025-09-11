@@ -12,6 +12,7 @@ export const OrderList = () => {
 
 	const getAndSetOrders = () => {
 		getAllOrders().then((orderArr) => setAllOrders(orderArr))
+        console.log("Today's date:", todaysDateWithoutTime)
 	}
 
 	///
@@ -21,9 +22,10 @@ export const OrderList = () => {
 
 	useEffect(() => {
 		if (filteredOrders) {
-			const orderFilter = allOrders.filter(
-				(order) => order.dateCreated.toDateString() === todaysDateWithoutTime
-			)
+			const orderFilter = allOrders.filter(order => {
+                    const orderDate = new Date(order.dateTimeCreated)
+                    return orderDate.toDateString() === todaysDateWithoutTime
+        })
 			setFilteredOrders(orderFilter)
 		}
 	}, [allOrders])
@@ -32,10 +34,10 @@ export const OrderList = () => {
 	return (
 		<div>
 			<h1>Orders</h1>
-			<FilterBar allOrders={allOrders} setFilteredOrders={setFilteredOrders} />
+			<FilterBar allOrders={allOrders} setFilteredOrders={setFilteredOrders} todaysDate={todaysDate} todaysDateWithoutTime={todaysDateWithoutTime}/>
 			<div className="filtered-orders">
 				{filteredOrders.map((order) => {
-					return <Order order={order} />
+					return <Order order={order} key={order.id}/>
 				})}
 			</div>
 		</div>
