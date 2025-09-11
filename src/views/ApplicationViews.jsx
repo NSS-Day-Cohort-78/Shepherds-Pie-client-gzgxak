@@ -4,6 +4,7 @@ import { NavBar } from "../components/navbar/navbar"
 import { EmployeeList } from "../EmployeeList/EmployeeList"
 import { EmployeeEdit } from "../EmployeeList/EmployeeEdit"
 import { NewOrderForm } from "../components/form/CreateOrderForm"
+import { OrderList } from "../Orders/OrderList"
 
 export const ApplicationViews = () => {
 	const [currentUser, setCurrentUser] = useState({})
@@ -26,7 +27,14 @@ export const ApplicationViews = () => {
 					</>
 				}
 			>
-				<Route index element={<h1>Order List</h1>} />
+				<Route
+					index
+					element={
+						<h1>
+							<OrderList currentUser={currentUser} />
+						</h1>
+					}
+				/>
 				<Route
 					path="/neworder"
 					element={

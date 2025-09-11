@@ -1,46 +1,51 @@
 import { useEffect, useState } from "react"
 import { Order } from "./Order"
 import { FilterBar } from "./FilterBar"
-
-// import service to get all orders
-    // placeholder func = getAllOrders()
+import { getAllOrders } from "../service/newOrderService"
 
 export const OrderList = () => {
-    const [allOrders, setAllOrders] = useState([])
-    const [filteredOrders, setFilteredOrders] = useState([])
+	const [allOrders, setAllOrders] = useState([])
+	const [filteredOrders, setFilteredOrders] = useState([])
 
-    const todaysDate = new Date()
-    const todaysDateWithoutTime = todaysDate.toDateString()
+	const todaysDate = new Date()
+	const todaysDateWithoutTime = todaysDate.toDateString()
 
-    const getAndSetOrders = () => {
-        getAllOrders().then((orderArr) => setAllOrders(orderArr))
-    }
+	const getAndSetOrders = () => {
+		getAllOrders().then((orderArr) => setAllOrders(orderArr))
+	}
 
-    useEffect(() => {
-        if (filteredOrders) {
-            const orderFilter = allOrders.filter(order => 
-                order.dateCreated.toDateString() === todaysDateWithoutTime)
-            setFilteredOrders(orderFilter)
-        }   
-    }, [filteredOrders, allOrders])
+	///
+	useEffect(() => {
+		getAndSetOrders()
+	}, [])
 
-    return (
-        <div>
-            <h1>Orders</h1>
-                <FilterBar allOrders={allOrders} setFilteredOrders={setFilteredOrders} />
-                <div className="filtered-orders">
-                    {filteredOrders.map((order) => {
-                        return <Order order={order} />
-                    })}
-                </div>
-        </div>
-    )
+	useEffect(() => {
+		if (filteredOrders) {
+			const orderFilter = allOrders.filter(
+				(order) => order.dateCreated.toDateString() === todaysDateWithoutTime
+			)
+			setFilteredOrders(orderFilter)
+		}
+	}, [allOrders])
+	///
+
+	return (
+		<div>
+			<h1>Orders</h1>
+			<FilterBar allOrders={allOrders} setFilteredOrders={setFilteredOrders} />
+			<div className="filtered-orders">
+				{filteredOrders.map((order) => {
+					return <Order order={order} />
+				})}
+			</div>
+		</div>
+	)
 }
 
 // see today's orders by default
 // orders should be sorted by datetime (newest first)
 // date filter:
-    // updates list to show orders for selected date
+// updates list to show orders for selected date
 // if more than 20 orders:
-    // orders should be paginated
-    // controls to navigate between pages
+// orders should be paginated
+// controls to navigate between pages
