@@ -1,4 +1,4 @@
-export const createNewOrder = () => {
+export const createNewOrder = (newOrder) => {
   return fetch(`http://localhost:8088/orders`, {
     method: "POST",
     headers: {
