@@ -34,7 +34,7 @@ export const OrderList = () => {
 	return (
 		<div>
 			<h1>Orders</h1>
-			<FilterBar allOrders={allOrders} setFilteredOrders={setFilteredOrders} />
+			<FilterBar allOrders={allOrders} setFilteredOrders={setFilteredOrders} todaysDate={todaysDate} todaysDateWithoutTime={todaysDateWithoutTime}/>
 			<div className="filtered-orders">
 				{filteredOrders.map((order) => {
 					return <Order order={order} key={order.id}/>
