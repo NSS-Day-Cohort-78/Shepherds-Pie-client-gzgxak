@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react"
 import {
-	getallCheeses,
-	getallSauces,
-	getallSizes,
+	getAllCheeses,
+	getAllSauces,
+	getAllSizes,
 	getOrdersWithPizzas,
 	getPizzas,
 	getPizzaToppings,
@@ -25,9 +25,9 @@ export const SalesReport = () => {
 		getOrdersWithPizzas().then((data) => setSalesData(data))
 		getPizzas().then((data) => setPizzaData(data))
 		getPizzaToppings().then((data) => setToppingData(data))
-		getallSizes().then((data) => setSizeData(data))
-		getallCheeses().then((data) => setCheeseData(data))
-		getallSauces().then((data) => setSauceData(data))
+		getAllSizes().then((data) => setSizeData(data))
+		getAllCheeses().then((data) => setCheeseData(data))
+		getAllSauces().then((data) => setSauceData(data))
 		getAllToppings().then((data) => setAllToppingsData(data))
 	}, [])
 

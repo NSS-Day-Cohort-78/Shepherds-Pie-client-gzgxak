@@ -16,18 +16,18 @@ export const getPizzaToppings = () => {
 	).then((res) => res.json())
 }
 
-export const getallTopings = () => {
+export const getAllToppings = () => {
 	return fetch(`http://localhost:8088/toppings`).then((res) => res.json())
 }
 
-export const getallSizes = () => {
+export const getAllSizes = () => {
 	return fetch(`http://localhost:8088/sizes`).then((res) => res.json())
 }
 
-export const getallCheeses = () => {
+export const getAllCheeses = () => {
 	return fetch(`http://localhost:8088/cheeses`).then((res) => res.json())
 }
 
-export const getallSauces = () => {
+export const getAllSauces = () => {
 	return fetch(`http://localhost:8088/sauces`).then((res) => res.json())
 }
