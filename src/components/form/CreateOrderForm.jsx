@@ -30,7 +30,8 @@ export const NewOrderForm = ({ currentUser }) => {
 				customerAddress: order.customerAddress,
 				delivery: order.delivery,
 				tip: order.tip,
-				dateTimeCreated: new Date()
+				dateTimeCreated: new Date(),
+				dateCompleted: ""
 			}
 			createNewOrder(newOrder).then(() => {
 				navigate("/orderDetails")
@@ -49,7 +50,8 @@ export const NewOrderForm = ({ currentUser }) => {
 				customerAddress: order.customerAddress,
 				delivery: order.delivery,
 				tip: order.tip,
-				dateTimeCreated: new Date()
+				dateTimeCreated: new Date(),
+				dateCompleted: ""
 			}
 			createNewOrder(newOrder).then(() => {
 				navigate("/orderDetails")

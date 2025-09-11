@@ -149,6 +149,7 @@
   "orders": [
     {
       "id": 1,
+      "userId": 1,
       "customerName": "John Doe",
       "customerPhoneNumber": "555-0123",
       "customerEmail": "john@example.com",
@@ -159,6 +160,15 @@
       "tip": 500
     },
     {
+      "userId": 4,
+      "customerName": "Deez nuts",
+      "customerPhoneNumber": "123-4567",
+      "customerEmail": "deez@nuts.balls",
+      "customerAddress": "blahblahblah",
+      "delivery": true,
+      "tip": "3.50",
+      "dateTimeCreated": "2025-09-11T14:40:02.949Z",
+      "dateCompleted": "",
       "id": 2
     }
   ],
@@ -244,18 +254,16 @@
       "email": "james.thomas@email.com"
     }
   ],
-  "assignedEmployees": [
+  "assignedDeliveryEmployees": [
     {
       "id": 1,
       "orderId": 1,
-      "userId": 2,
-      "delivering": true
+      "userId": 2
     },
     {
       "id": 2,
       "orderId": 1,
-      "userId": 1,
-      "delivering": false
+      "userId": 1
     }
   ],
   "orderPizzas": [
