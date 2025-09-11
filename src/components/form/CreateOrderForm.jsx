@@ -66,7 +66,7 @@ export const NewOrderForm = ({ currentUser }) => {
 			<h2>Create Order</h2>
 			<fieldset>
 				<div>
-					<label>Name:</label>
+					<label>Name: </label>
 					<input
 						type="text"
 						name="customer-name"
@@ -81,7 +81,7 @@ export const NewOrderForm = ({ currentUser }) => {
 			</fieldset>
 			<fieldset>
 				<div>
-					<label>Phone Number:</label>
+					<label>Phone Number: </label>
 					<input
 						type="text"
 						name="customer-phone"
@@ -96,7 +96,7 @@ export const NewOrderForm = ({ currentUser }) => {
 			</fieldset>
 			<fieldset>
 				<div>
-					<label>Email:</label>
+					<label>Email: </label>
 					<input
 						type="text"
 						name="customer-email"
@@ -111,7 +111,7 @@ export const NewOrderForm = ({ currentUser }) => {
 			</fieldset>
 			<fieldset>
 				<div>
-					<label>Address:</label>
+					<label>Address: </label>
 					<input
 						type="text"
 						name="customer-address"
@@ -126,13 +126,24 @@ export const NewOrderForm = ({ currentUser }) => {
 			</fieldset>
 			<fieldset>
 				<div>
-					<label>Delivery?</label>
+					<label>Delivery? </label>
+					<label>Yes </label>
 					<input
-						type="checkbox"
+						type="radio"
 						name="delivery-option"
 						onChange={(event) => {
 							const orderCopy = { ...order }
-							orderCopy.delivery = event.target.checked
+							orderCopy.delivery = true
+							setOrder(orderCopy)
+						}}
+					/>
+					<label> No </label>
+					<input
+						type="radio"
+						name="delivery-option"
+						onChange={(event) => {
+							const orderCopy = { ...order }
+							orderCopy.delivery = false
 							setOrder(orderCopy)
 						}}
 					/>
