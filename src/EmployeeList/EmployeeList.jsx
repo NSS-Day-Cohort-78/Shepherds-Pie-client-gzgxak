@@ -1,8 +1,8 @@
-// import { GetUsers } from "./UserService.jsx"
+import { getUsers } from "./UserService.jsx"
 import { useNavigate } from "react-router-dom"
 
 export const EmployeeList = ({ currentUser }) => {
-  const users = GetUsers();
+  const users = getUsers();
 
   const navigate = useNavigate()
 
