@@ -1,10 +1,16 @@
+import { useEffect, useState } from "react";
 import { getUsers } from "../service/userService.js";
 import { useNavigate } from "react-router-dom"
 
 export const EmployeeList = ({ currentUser }) => {
-  const users = getUsers();
-
+  const [users, setUsers] = useState([])
   const navigate = useNavigate()
+
+  useEffect(() => {
+    getUsers().then((usersArr) => {
+      setUsers(usersArr);
+    })
+  }, [])
 
   if (!currentUser?.admin) {
     return (
