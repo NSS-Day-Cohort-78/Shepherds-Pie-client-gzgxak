@@ -8,8 +8,11 @@ import {
 	getPizzaToppings,
 	getAllToppings
 } from "../../service/reportService"
+import { MonthlyDropdownMenu } from "./MonthlyDropdownMenu"
+import { DailySales } from "./DailySales"
+import { PopularItems } from "./PopularItems"
 
-export const SalesReport = () => {
+export const SalesReport = ({ currentUser }) => {
 	const [salesData, setSalesData] = useState([])
 	const [pizzaData, setPizzaData] = useState([])
 	const [toppingData, setToppingData] = useState([])
@@ -97,10 +100,13 @@ export const SalesReport = () => {
 
 	return (
 		<>
-			<h1>Monthly Sales Report</h1>
-			{/*Sales Report Section*/}
-			{/*Daily Sales (Based on selected month)*/}
-			{/*Popular Items*/}
+			<MonthlyDropdownMenu
+				currentUser={currentUser}
+				setFilteredData={setFilteredData}
+				detailedData={detailedData}
+			/>
+			<DailySales currentUser={currentUser} filteredData={filteredData} />
+			<PopularItems currentUser={currentUser} detailedData={detailedData} />
 		</>
 	)
 }
