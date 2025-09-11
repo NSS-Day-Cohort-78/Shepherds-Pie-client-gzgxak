@@ -2,7 +2,7 @@ export const FilterBar = ( { allOrders, setFilteredOrders } ) => {
     
     const filterOrders = (event) => {
         const filteredOrders = allOrders.filter((order) => 
-            order.dateCreated.includes(event.target.value))
+            order.dateTimeCreated === event.target.value)
 
         setFilteredOrders(filteredOrders)
     }
@@ -14,7 +14,12 @@ export const FilterBar = ( { allOrders, setFilteredOrders } ) => {
 
             <select name="date" onChange={filterOrders}>
                 <option value="">Select date option</option>
-                <option value="2025-09-10">2025-09-10</option>
+                {allOrders.map((order) => {
+                    const date = new Date(order.dateTimeCreated)
+                    const formattedDate = date.toDateString()
+                    return <option key={order.id} value={order.dateTimeCreated}>{formattedDate}</option>   
+                })}
+                
             </select>
             
         </div>
