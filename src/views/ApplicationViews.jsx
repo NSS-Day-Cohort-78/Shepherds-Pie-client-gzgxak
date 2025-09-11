@@ -1,6 +1,9 @@
 import { useEffect, useState } from "react"
 import { Outlet, Route, Routes } from "react-router-dom"
 import { NavBar } from "../components/navbar/navbar"
+import { EmployeeList } from "../EmployeeList/EmployeeList"
+import { EmployeeEdit } from "../EmployeeList/EmployeeEdit"
+import { NewOrderForm } from "../components/form/CreateOrderForm"
 
 export const ApplicationViews = () => {
 	const [currentUser, setCurrentUser] = useState({})
@@ -24,10 +27,17 @@ export const ApplicationViews = () => {
 				}
 			>
 				<Route index element={<h1>Order List</h1>} />
-				<Route path="/neworder" element={<h1>Create New Order</h1>} />
+				<Route
+					path="/neworder"
+					element={
+						<h1>
+							<NewOrderForm currentUser={currentUser} />
+						</h1>
+					}
+				/>
 				<Route path="/employees">
 					<Route index element={<EmployeeList currentUser={currentUser} />} />
-					<Route path =":employeeId" element={<EmployeeEdit />} />
+					<Route path=":employeeId" element={<EmployeeEdit />} />
 				</Route>
 				<Route path="/report" element={<h1>Sales Report</h1>} />
 			</Route>

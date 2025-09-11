@@ -1,35 +1,150 @@
 {
   "sizes": [
-    { "id": 1, "name": "Kids", "size": 8, "price": 600, "orderCount": 0 },
-    { "id": 2, "name": "Small", "size": 10, "price": 1000, "orderCount": 0 },
-    { "id": 3, "name": "Medium", "size": 14, "price": 1250, "orderCount": 0 },
-    { "id": 4, "name": "Large", "size": 16, "price": 1500, "orderCount": 0 },
-    { "id": 5, "name": "X Large", "size": 18, "price": 1800, "orderCount": 0 }
+    {
+      "id": 1,
+      "name": "Kids",
+      "size": 8,
+      "price": 600,
+      "orderCount": 0
+    },
+    {
+      "id": 2,
+      "name": "Small",
+      "size": 10,
+      "price": 1000,
+      "orderCount": 0
+    },
+    {
+      "id": 3,
+      "name": "Medium",
+      "size": 14,
+      "price": 1250,
+      "orderCount": 0
+    },
+    {
+      "id": 4,
+      "name": "Large",
+      "size": 16,
+      "price": 1500,
+      "orderCount": 0
+    },
+    {
+      "id": 5,
+      "name": "X Large",
+      "size": 18,
+      "price": 1800,
+      "orderCount": 0
+    }
   ],
   "cheeses": [
-    { "id": 1, "name": "Mozzarella", "orderCount": 0 },
-    { "id": 2, "name": "Buffalo Mozzarella", "orderCount": 0 },
-    { "id": 3, "name": "Four Cheese", "orderCount": 0 },
-    { "id": 4, "name": "Vegan", "orderCount": 0 }, 
-    { "id": 5, "name": "No Cheese", "orderCount": 0 }
+    {
+      "id": 1,
+      "name": "Mozzarella",
+      "orderCount": 0
+    },
+    {
+      "id": 2,
+      "name": "Buffalo Mozzarella",
+      "orderCount": 0
+    },
+    {
+      "id": 3,
+      "name": "Four Cheese",
+      "orderCount": 0
+    },
+    {
+      "id": 4,
+      "name": "Vegan",
+      "orderCount": 0
+    },
+    {
+      "id": 5,
+      "name": "No Cheese",
+      "orderCount": 0
+    }
   ],
   "sauces": [
-    { "id": 1, "name": "Marinara", "orderCount": 0 },
-    { "id": 2, "name": "Arrabbiata", "orderCount": 0 },
-    { "id": 3, "name": "Garlic White", "orderCount": 0 },
-    { "id": 4, "name": "Diavolo", "orderCount": 0 },
-    { "id": 5, "name": "No Sauce", "orderCount": 0 }
+    {
+      "id": 1,
+      "name": "Marinara",
+      "orderCount": 0
+    },
+    {
+      "id": 2,
+      "name": "Arrabbiata",
+      "orderCount": 0
+    },
+    {
+      "id": 3,
+      "name": "Garlic White",
+      "orderCount": 0
+    },
+    {
+      "id": 4,
+      "name": "Diavolo",
+      "orderCount": 0
+    },
+    {
+      "id": 5,
+      "name": "No Sauce",
+      "orderCount": 0
+    }
   ],
   "toppings": [
-    { "id": 1, "name": "Sausage", "price": 100, "orderCount": 0 },
-    { "id": 2, "name": "Pepperoni", "price": 100, "orderCount": 0 },
-    { "id": 3, "name": "Mushroom", "price": 75, "orderCount": 0 },
-    { "id": 4, "name": "Onion", "price": 50, "orderCount": 0 },
-    { "id": 5, "name": "Green pepper", "price": 75, "orderCount": 0 },
-    { "id": 6, "name": "Black olive", "price": 75, "orderCount": 0 },
-    { "id": 7, "name": "Basil", "price": 50, "orderCount": 0 },
-    { "id": 8, "name": "Extra cheese", "price": 100, "orderCount": 0 },
-    { "id": 9, "name": "Ricotta", "price": 100, "orderCount": 0 }
+    {
+      "id": 1,
+      "name": "Sausage",
+      "price": 100,
+      "orderCount": 0
+    },
+    {
+      "id": 2,
+      "name": "Pepperoni",
+      "price": 100,
+      "orderCount": 0
+    },
+    {
+      "id": 3,
+      "name": "Mushroom",
+      "price": 75,
+      "orderCount": 0
+    },
+    {
+      "id": 4,
+      "name": "Onion",
+      "price": 50,
+      "orderCount": 0
+    },
+    {
+      "id": 5,
+      "name": "Green pepper",
+      "price": 75,
+      "orderCount": 0
+    },
+    {
+      "id": 6,
+      "name": "Black olive",
+      "price": 75,
+      "orderCount": 0
+    },
+    {
+      "id": 7,
+      "name": "Basil",
+      "price": 50,
+      "orderCount": 0
+    },
+    {
+      "id": 8,
+      "name": "Extra cheese",
+      "price": 100,
+      "orderCount": 0
+    },
+    {
+      "id": 9,
+      "name": "Ricotta",
+      "price": 100,
+      "orderCount": 0
+    }
   ],
   "orders": [
     {
@@ -42,6 +157,9 @@
       "dateCreated": "2025-09-10T11:24:00.000Z",
       "dateCompleted": "",
       "tip": 500
+    },
+    {
+      "id": 2
     }
   ],
   "users": [
@@ -127,8 +245,18 @@
     }
   ],
   "assignedEmployees": [
-    { "id": 1, "orderId": 1, "userId": 2, "delivering": true },
-    { "id": 2, "orderId": 1, "userId": 1, "delivering": false }
+    {
+      "id": 1,
+      "orderId": 1,
+      "userId": 2,
+      "delivering": true
+    },
+    {
+      "id": 2,
+      "orderId": 1,
+      "userId": 1,
+      "delivering": false
+    }
   ],
   "orderPizzas": [
     {
@@ -141,7 +269,15 @@
     }
   ],
   "assignedToppings": [
-    { "id": 1, "toppingId": 2, "orderPizzaId": 1 },
-    { "id": 2, "toppingId": 3, "orderPizzaId": 1 }
+    {
+      "id": 1,
+      "toppingId": 2,
+      "orderPizzaId": 1
+    },
+    {
+      "id": 2,
+      "toppingId": 3,
+      "orderPizzaId": 1
+    }
   ]
 }
