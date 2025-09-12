@@ -9,8 +9,9 @@ import {
 	getAllToppings
 } from "../../service/reportService"
 import { MonthlyDropdownMenu } from "./MonthlyDropdownMenu"
-import { DailySales } from "./DailySales"
+import { MonthlySales } from "./MonthlySales"
 import { PopularItems } from "./PopularItems"
+import { DailySales } from "./DailySales"
 
 export const SalesReport = ({ currentUser }) => {
 	const [salesData, setSalesData] = useState([])
@@ -21,7 +22,8 @@ export const SalesReport = ({ currentUser }) => {
 	const [cheeseData, setCheeseData] = useState([])
 	const [sauceData, setSauceData] = useState([])
 	const [detailedData, setDetailedData] = useState([])
-	const [filteredData, setFilteredData] = useState([])
+	const [filter, setFilter] = useState("")
+	const [filteredData, setFilterData] = useState("")
 
 	useEffect(() => {
 		// Fetch sales data from database
@@ -33,6 +35,15 @@ export const SalesReport = ({ currentUser }) => {
 		getAllSauces().then((data) => setSauceData(data))
 		getAllToppings().then((data) => setAllToppingsData(data))
 	}, [])
+
+	useEffect(() => {
+		setFilterData(
+			detailedData.filter((order) => {
+				const monthNumber = new Date(order.dateTimeCreated).getMonth()
+				return monthNumber === parseInt(filter) - 1
+			})
+		)
+	}, [filter])
 
 	useEffect(() => {
 		if (
@@ -95,27 +106,28 @@ export const SalesReport = ({ currentUser }) => {
 		cheeseData,
 		sauceData,
 		toppingData,
-		allToppingsData
+		allToppingsData,
+		filteredData
 	])
 
 	return (
-		<>
-			<MonthlyDropdownMenu
-				currentUser={currentUser}
-				setFilteredData={setFilteredData}
-				detailedData={detailedData}
+		<div className="container mx-auto p-6 max-w-4xl">
+			<div className="bg-white shadow-md rounded-lg p-4">
+				<MonthlyDropdownMenu setFilter={setFilter} />
+				<MonthlySales filteredData={filteredData} />
+			</div>
+			<DailySales filteredData={filteredData} />
+			<PopularItems
+				sizeData={sizeData}
+				cheeseData={cheeseData}
+				sauceData={sauceData}
+				allToppingsData={allToppingsData}
+				salesData={salesData}
 			/>
-			<DailySales currentUser={currentUser} filteredData={filteredData} />
-			<PopularItems currentUser={currentUser} detailedData={detailedData} />
-		</>
+		</div>
 	)
 }
 
-//TODO: Add functionality to select month from dropdown
-//TODO: Create Daily Sales Section
-//TODO: Create Popular Items Section
-//TODO: Create MonthlyDropdownmenu component
-//TODO: Create DetailsButton component
 //TODO: Style the report with CSS
 
 /*Sales Report Section

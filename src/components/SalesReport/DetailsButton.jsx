@@ -1,3 +1,3 @@
-export const DetailsButton = () => {
-	return <h1>Details Button</h1>
+export const DetailsButton = ({ item, setItemDetailsView }) => {
+	return <button onClick={() => setItemDetailsView(item)}>Details</button>
 }
