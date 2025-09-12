@@ -32,9 +32,11 @@ export const OrderList = () => {
 	///
 
 	return (
-		<div>
-			<h1>Orders</h1>
-			<FilterBar allOrders={allOrders} setFilteredOrders={setFilteredOrders} todaysDate={todaysDate} todaysDateWithoutTime={todaysDateWithoutTime}/>
+		<div className="m-5">
+            {/* <div className="flex [&_*]:p-4 items-center"> */}
+                <h1 className="text-2xl ">Orders</h1>
+                <FilterBar className="" allOrders={allOrders} setFilteredOrders={setFilteredOrders} todaysDate={todaysDate} todaysDateWithoutTime={todaysDateWithoutTime}/>
+            {/* </div> */}
 			<div className="filtered-orders">
 				{filteredOrders.map((order) => {
 					return <Order order={order} key={order.id}/>
