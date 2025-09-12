@@ -151,7 +151,7 @@
       "id": 1,
       "userId": 1,
       "customerName": "John Doe",
-      "customerPhoneNumber": "555-0123",
+      "customerPhoneNumber": "555-555-0123",
       "customerEmail": "john@example.com",
       "customerAddress": "123 Main St",
       "delivery": true,
@@ -162,7 +162,7 @@
     {
       "userId": 4,
       "customerName": "Deez nuts",
-      "customerPhoneNumber": "123-4567",
+      "customerPhoneNumber": "123-555-4567",
       "customerEmail": "deez@nuts.balls",
       "customerAddress": "blahblahblah",
       "delivery": true,
@@ -178,7 +178,7 @@
       "name": "Alice Smith",
       "admin": true,
       "address": "123 Music Row, Nashville, TN 37203",
-      "phoneNumber": "615-0101",
+      "phoneNumber": "615-555-0101",
       "email": "alice.smith@email.com"
     },
     {
@@ -186,7 +186,7 @@
       "name": "Bob Johnson",
       "admin": false,
       "address": "456 Broadway, Nashville, TN 37203",
-      "phoneNumber": "615-0102",
+      "phoneNumber": "615-555-0102",
       "email": "bob.johnson@email.com"
     },
     {
@@ -194,7 +194,7 @@
       "name": "Carol Williams",
       "admin": false,
       "address": "789 16th Avenue South, Nashville, TN 37212",
-      "phoneNumber": "615-0103",
+      "phoneNumber": "615-555-0103",
       "email": "carol.williams@email.com"
     },
     {
@@ -202,7 +202,7 @@
       "name": "David Brown",
       "admin": true,
       "address": "321 Demonbreun Street, Nashville, TN 37201",
-      "phoneNumber": "615-0104",
+      "phoneNumber": "615-555-0104",
       "email": "david.brown@email.com"
     },
     {
@@ -210,7 +210,7 @@
       "name": "Emma Davis",
       "admin": false,
       "address": "654 Belle Meade Boulevard, Nashville, TN 37205",
-      "phoneNumber": "615-0105",
+      "phoneNumber": "615-555-0105",
       "email": "emma.davis@email.com"
     },
     {
@@ -218,7 +218,7 @@
       "name": "Frank Wilson",
       "admin": false,
       "address": "987 Hillsboro Pike, Brentwood, TN 37027",
-      "phoneNumber": "615-0106",
+      "phoneNumber": "615-555-0106",
       "email": "frank.wilson@email.com"
     },
     {
@@ -226,7 +226,7 @@
       "name": "Grace Taylor",
       "admin": true,
       "address": "147 Main Street, Franklin, TN 37064",
-      "phoneNumber": "615-0107",
+      "phoneNumber": "615-555-0107",
       "email": "grace.taylor@email.com"
     },
     {
@@ -234,7 +234,7 @@
       "name": "Henry Anderson",
       "admin": false,
       "address": "258 Gallatin Pike, Hendersonville, TN 37075",
-      "phoneNumber": "615-0108",
+      "phoneNumber": "615-555-0108",
       "email": "henry.anderson@email.com"
     },
     {
@@ -242,7 +242,7 @@
       "name": "Isabella Martinez",
       "admin": false,
       "address": "369 Church Street, Murfreesboro, TN 37130",
-      "phoneNumber": "615-0109",
+      "phoneNumber": "615-555-0109",
       "email": "isabella.martinez@email.com"
     },
     {
@@ -250,7 +250,7 @@
       "name": "James Thomas",
       "admin": false,
       "address": "741 Lebanon Pike, Hermitage, TN 37076",
-      "phoneNumber": "615-0110",
+      "phoneNumber": "615-555-0110",
       "email": "james.thomas@email.com"
     }
   ],

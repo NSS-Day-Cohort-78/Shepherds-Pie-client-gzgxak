@@ -8,7 +8,11 @@ export const EmployeeEdit = () => {
   const { employeeId } = useParams();
 
   const isValidPhone = (phone) => {
-    return /^\d{3}-\d{4}$/.test(phone);
+    return /^\d{3}-\d{3}-\d{4}$/.test(phone);
+  };
+
+  const isValidEmail = (email) => {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
   };
 
   useEffect(() => {
@@ -62,7 +66,6 @@ export const EmployeeEdit = () => {
               <input
                 className="employee-edit-input"
                 type="tel"
-                pattern="[0-9]{3}-[0-9]{4}"
                 required
                 value={employee.phoneNumber}
                 onChange={(event) => {
@@ -100,14 +103,16 @@ export const EmployeeEdit = () => {
               employee.address &&
               employee.phoneNumber &&
               isValidPhone(employee.phoneNumber) &&
-              employee.email
+              employee.email &&
+              isValidEmail(employee.email)
             ) {
               window.alert("Changes Saved");
               handleSaveChanges();
             } else {
               window.alert(
                 `All fields are required before changes can be saved.
-You must include a valid phone number and email address.`
+Phone number must be in format: 123-456-7890
+Email must be a valid email address.`
               );
             }
           }}
