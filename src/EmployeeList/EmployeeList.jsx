@@ -27,7 +27,7 @@ export const EmployeeList = ({ currentUser }) => {
         return (
           <div key={user.id} className="employee-info">
             <div>
-              <h2>{user.name}</h2>
+              <h2 className="employee-list-name">{user.name}</h2>
               <p>{user.address}</p>
               <p>{user.phoneNumber}</p>
               <p>{user.email}</p>
