@@ -32,10 +32,12 @@ export const OrderList = () => {
 	///
 
 	return (
-		<div>
-			<h1>Orders</h1>
-			<FilterBar allOrders={allOrders} setFilteredOrders={setFilteredOrders} todaysDate={todaysDate} todaysDateWithoutTime={todaysDateWithoutTime}/>
-			<div className="filtered-orders">
+		<div className="m-5 [&_*]:p-2">
+            {/* <div className="flex [&_*]:p-4 items-center"> */}
+                <h1 className="text-2xl ">Orders</h1>
+                <FilterBar className="" allOrders={allOrders} setFilteredOrders={setFilteredOrders} todaysDate={todaysDate} todaysDateWithoutTime={todaysDateWithoutTime}/>
+            {/* </div> */}
+			<div className="p-4">
 				{filteredOrders.map((order) => {
 					return <Order order={order} key={order.id}/>
 				})}
@@ -43,11 +45,3 @@ export const OrderList = () => {
 		</div>
 	)
 }
-
-// see today's orders by default
-// orders should be sorted by datetime (newest first)
-// date filter:
-// updates list to show orders for selected date
-// if more than 20 orders:
-// orders should be paginated
-// controls to navigate between pages
