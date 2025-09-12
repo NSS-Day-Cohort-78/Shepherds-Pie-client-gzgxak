@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { getUsers } from "../service/userService.js";
 import { useNavigate } from "react-router-dom"
+import "./EmployeeList.css"
 
 export const EmployeeList = ({ currentUser }) => {
   const [users, setUsers] = useState([])
